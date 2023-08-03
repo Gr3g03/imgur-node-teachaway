@@ -16,7 +16,7 @@ app.get('/', async(req, res)=>{
 })
 
 
-app.get('/data/:popularity/:sort/:period', async (req, res) => {
+app.post('/data/:popularity/:sort/:period', async (req, res) => {
     const {popularity , sort ,period} =req.params
     const{itemsPerPage , currentPage } = req.body
     
@@ -36,6 +36,6 @@ app.get('/data/:popularity/:sort/:period', async (req, res) => {
 });
 
 
-app.listen(port, path , ()=>{
+app.listen(port,  ()=>{
     console.log(path)
 })
