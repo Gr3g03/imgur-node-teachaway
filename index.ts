@@ -8,7 +8,8 @@ app.use(cors({}))
 app.use(express.json())
 app.use(express.static('public'))
 
-const path =  'http://localhost:4000'
+const http =require('http')
+const path =  '0.0.0.0'
 const port = 4000
 app.get('/', async(req, res)=>{
     res.send(`server up and running : ${[path]}`)
@@ -35,6 +36,6 @@ app.post('/data/:popularity/:sort/:period', async (req, res) => {
 });
 
 
-app.listen(port, ()=>{
+app.listen(port, path , ()=>{
     console.log(path)
 })
