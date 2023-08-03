@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "imgur-node",
   "main": "index.js",
+  "type": "module" ,
   "scripts": {
     "start": "ts-node index.ts",
     "test": "start"
